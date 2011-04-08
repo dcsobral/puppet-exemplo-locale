@@ -1,0 +1,3 @@
+package { 'locales':
+	ensure => installed,
+}

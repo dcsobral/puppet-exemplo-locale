@@ -20,3 +20,6 @@ file { '/etc/locale.gen':
 	mode    => 644,
 }
 
+exec { '/usr/sbin/locale-gen':
+}
+

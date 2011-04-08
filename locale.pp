@@ -10,3 +10,13 @@ file { '/etc/default/locale':
 	group   => 'root',
 	mode    => 644,
 }
+
+file { '/etc/locale.gen':
+	ensure  => present,
+	source  => '/root/exemplo/locale.gen',
+	require => Package['locales'],
+	owner   => 'root',
+	group   => 'root',
+	mode    => 644,
+}
+

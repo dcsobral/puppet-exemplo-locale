@@ -21,5 +21,6 @@ file { '/etc/locale.gen':
 }
 
 exec { '/usr/sbin/locale-gen':
+    require => [ Package['locales'], File['/etc/locale.gen'] ],
 }
 
